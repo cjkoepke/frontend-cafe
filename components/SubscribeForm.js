@@ -1,4 +1,20 @@
 import React, { Component } from 'react';
+import * as colors from '../utils/colors';
+import styled from 'styled-components';
+
+const Button = styled.button`
+    background: ${colors.base.dark};
+    border: none;
+    border-radius: 8px;
+    color: ${colors.base.light};
+    padding: 16px 24px;
+`
+
+const LabelWrap = styled.div`
+    label {
+        display: block;
+    }
+`
 
 class SubscribeForm extends Component {
     state = {
@@ -24,20 +40,22 @@ class SubscribeForm extends Component {
         const firstName = names[0];
         const lastName = names[1];
         const email = this.state.email;
-
-        console.log( firstName, lastName, email);
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="name">Your Full Name</label>
-                <input id="name" type="text" onChange={this.updateName} value={this.state.fullName} />
+                <LabelWrap>
+                    <label htmlFor="name">Your Full Name</label>
+                    <input id="name" type="text" onChange={this.updateName} value={this.state.fullName} />
+                </LabelWrap>
 
-                <label htmlFor="email">Where do ya want your frontend coffee?</label>
-                <input id="email" type="email" onChange={this.updateEmail} value={this.state.email} />
+                <LabelWrap>
+                    <label htmlFor="email">Where do ya want your frontend coffee?</label>
+                    <input id="email" type="email" onChange={this.updateEmail} value={this.state.email} />
+                </LabelWrap>
 
-                <input type="submit" value="Subscribe!"/>
+                <Button>Subscribe!</Button>
             </form>
         )
     }

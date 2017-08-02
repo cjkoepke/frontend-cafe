@@ -5,7 +5,7 @@ export const primary = {
 }
 
 export const base = {
-    light: '#DEE2E5',
+    light: '#F7FBFF',
     gray: '#9DB0C4',
     dark: '#081B2D'
 }

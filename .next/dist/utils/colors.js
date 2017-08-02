@@ -10,7 +10,7 @@ var primary = exports.primary = {
 };
 
 var base = exports.base = {
-    light: '#DEE2E5',
+    light: '#F7FBFF',
     gray: '#9DB0C4',
     dark: '#081B2D'
 };

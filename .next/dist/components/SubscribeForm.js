@@ -28,10 +28,30 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _colors = require('../utils/colors');
+
+var colors = _interopRequireWildcard(_colors);
+
+var _styledComponents = require('styled-components');
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/cjkoepke/Repos/frontend-cafe/components/SubscribeForm.js';
 
+
+var Button = _styledComponents2.default.button.withConfig({
+    displayName: 'SubscribeForm__Button',
+    componentId: 's1t1ylmu-0'
+})(['background:', ';border:none;border-radius:8px;color:', ';padding:16px 24px;'], colors.base.dark, colors.base.light);
+
+var LabelWrap = _styledComponents2.default.div.withConfig({
+    displayName: 'SubscribeForm__LabelWrap',
+    componentId: 's1t1ylmu-1'
+})(['label{display:block;}']);
 
 var SubscribeForm = function (_Component) {
     (0, _inherits3.default)(SubscribeForm, _Component);
@@ -64,8 +84,6 @@ var SubscribeForm = function (_Component) {
             var firstName = names[0];
             var lastName = names[1];
             var email = _this.state.email;
-
-            console.log(firstName, lastName, email);
         }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
 
@@ -74,29 +92,40 @@ var SubscribeForm = function (_Component) {
         value: function render() {
             return _react2.default.createElement('form', { onSubmit: this.handleSubmit, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 33
+                    lineNumber: 47
+                }
+            }, _react2.default.createElement(LabelWrap, {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 48
                 }
             }, _react2.default.createElement('label', { htmlFor: 'name', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 34
+                    lineNumber: 49
                 }
             }, 'Your Full Name'), _react2.default.createElement('input', { id: 'name', type: 'text', onChange: this.updateName, value: this.state.fullName, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 35
+                    lineNumber: 50
                 }
-            }), _react2.default.createElement('label', { htmlFor: 'email', __source: {
+            })), _react2.default.createElement(LabelWrap, {
+                __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 37
+                    lineNumber: 53
+                }
+            }, _react2.default.createElement('label', { htmlFor: 'email', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 54
                 }
             }, 'Where do ya want your frontend coffee?'), _react2.default.createElement('input', { id: 'email', type: 'email', onChange: this.updateEmail, value: this.state.email, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 38
+                    lineNumber: 55
                 }
-            }), _react2.default.createElement('input', { type: 'submit', value: 'Subscribe!', __source: {
+            })), _react2.default.createElement(Button, {
+                __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 40
+                    lineNumber: 58
                 }
-            }));
+            }, 'Subscribe!'));
         }
     }]);
 
