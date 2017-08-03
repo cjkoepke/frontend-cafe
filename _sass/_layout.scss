@@ -1,5 +1,3 @@
----
----
 $grayDark: #2B2D42 !default;
 $grayLight: #8D99AE !default;
 $white: #EDF2F4 !default;
@@ -17,7 +15,7 @@ body {
 
 body {
     background-color: $redLight;
-    background-image: url('{{ site.github.url }}/assets/images/bg.svg');
+    background-image: url($baseURL + '/assets/images/bg.svg');
     background-size: cover;
     color: $white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
