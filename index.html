@@ -4,18 +4,30 @@ layout: default
 <div class="wrap">
     <p><img id="logo" src="{{ site.github.url }}/assets/images/logo.svg" /></p>
     <h1 id="title">Frontend caffeine for your inbox.</h1>
-    <form id="sign-up">
-        <div id="message"></div>
+    <form id="mc-embedded-subscribe-form" action="//chat.us2.list-manage.com/subscribe/post?u=946526142d903ddb83f252eca&amp;id=41128240c6" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+        <div class="spectrum-message">
+            <p>Pss...don't forget: there's an active and vibrant frontend community on Spectrum, and it's <strong>free to join!</strong></p>
+            <p><a href="https://spectrum.chat/frontend/" class="button">Join on Spectrum!</a></p>
+        </div>
         <div class="form">
-            <div class="label-wrap">
-                <label for="name">First &amp; Last Name</label>
-                <input type="text" id="name" value="" placeholder="First and last name..."  />
+            <div class="label-wrap mce-field-group">
+                <label for="mce-FNAME">First Name</label>
+                <input type="text" id="mce-FNAME" name="FNAME" value="" placeholder="First name..."  />
             </div>
-            <div class="label-wrap">
-                <label for="name">Email Address</label>
-                <input type="email" id="email" value="" placeholder="Email address..." />
+            <div class="label-wrap mce-field-group">
+                <label for="mce-EMAIL">Email Address</label>
+                <input type="email" class="required email" name="EMAIL" id="mce-EMAIL" value="" placeholder="Email address..." />
             </div>
-            <input type="submit" value="Get the Caffeine &raquo;" />
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_946526142d903ddb83f252eca_41128240c6" tabindex="-1" value=""></div>
+            <input type="submit" name="subscribe" id="mc-embedded-subscribe" value="Get the Caffeine &raquo;" />
         </div>
     </form>
+
+    <footer>
+        <p><small>Curated and maintained by <a href="https://twitter.com/cjkoepke" target="_blank">Calvin Koepke</a></small></p>
+    </footer>
 </div>

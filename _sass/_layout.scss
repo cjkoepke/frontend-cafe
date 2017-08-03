@@ -21,22 +21,67 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     font-size: 20px;
     display: flex;
+    padding: 3%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
+@media only screen and (max-width: 780px) {
+    body {
+        justify-content: flex-start;
+    }
+}
+
+a {
+    color: $white;
+    font-weight: 700;
+}
+
+strong {
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.64;
+}
+
 .wrap {
-    margin-top: -100px;
+    margin-top: -60px;
+}
+
+@media only screen and (max-width: 780px) {
+    .wrap {
+        margin-top: 40px;
+    }
+}
+
+.spectrum-message {
+    display: none;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
 }
 
 #logo {
-    width: 100px;
+    width: 150px;
+}
+
+@media only screen and (max-width: 780px) {
+    #logo {
+        width: 100px;
+    }
 }
 
 #title {
     font-size: 4rem;
+}
+
+@media only screen and (max-width: 780px) {
+    #title {
+        font-size: 2rem;
+    }
 }
 
 .underline {
@@ -51,16 +96,14 @@ body {
     text-align: center;
 }
 
-#message {
-    background: $grayDark;
+.response {
+    background: $grayLight;
+    box-shadow: 4px 8px 32px rgba($grayDark, .4);
     border-radius: 4px;
     color: $white;
     padding: 16px;
-    display: none;
-}
-
-#message.visible {
-    display: block;
+    margin-bottom: 32px;
+    font-size: 1rem;
 }
 
 ::-webkit-input-placeholder {
@@ -98,19 +141,29 @@ input {
     }
 }
 
+@media only screen and (max-width: 780px) {
+    .label-wrap {
+        grid-column: span 2;
+    }
+}
+
 label {
     display: none;
 }
 
-input[type="submit"] {
+input[type="submit"],
+.button {
     background: $grayDark;
     border: 0;
     border-radius: 4px;
     color: $white;
     font-weight: 700;
     letter-spacing: .04em;
-    padding: 20px 8px 16px;
+    padding: 20px 24px 16px;
     grid-column: span 2;
+    text-decoration: none;
+    transition: all .10s ease-in-out;
+    display: inline-block;
 
     &:hover {
         cursor: pointer;
@@ -119,6 +172,6 @@ input[type="submit"] {
     }
 }
 
-.label-wrap {
-    position: relative;
+.button {
+    padding: 16px 24px;
 }
