@@ -3,3 +3,5 @@ hostname: localhost
 port: 5000
 sass:
   sass_dir: _sass
+gems:
+  - jekyll-babel
