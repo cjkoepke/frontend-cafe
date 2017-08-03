@@ -1,0 +1,12 @@
+timezone: America/Denver
+hostname: localhost
+port: 5000
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+  - scope:
+      path: "assets/js"
+    values:
+       script: true
