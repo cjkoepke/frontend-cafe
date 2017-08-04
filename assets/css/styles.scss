@@ -2,8 +2,6 @@
 # Main stylesheet.
 ---
 
-$baseURL: '{{ site.github.url }}';
-
 @import
     'base',
     'layout'

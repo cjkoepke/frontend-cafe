@@ -15,7 +15,7 @@ body {
 
 body {
     background-color: $redLight;
-    background-image: url($baseURL + '/assets/images/bg.svg');
+    background-image: url('/assets/images/bg.svg');
     background-size: cover;
     color: $white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
